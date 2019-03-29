@@ -3,8 +3,8 @@ import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'welcome',
-    loadChildren: './welcome/welcome.module#WelcomeModule'
+    path: 'home',
+    loadChildren: './home/home.module#HomeModule'
   }
 ];
 
