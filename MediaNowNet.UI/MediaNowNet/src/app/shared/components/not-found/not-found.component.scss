@@ -1,0 +1,36 @@
+@import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
+@import '../../styles/colors';
+
+.not-found-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  padding-bottom: 60px;
+  text-align: center;
+
+  &__error-number {
+    animation: glow 2s ease-in-out infinite alternate;
+    font-family: 'Press Start 2P', cursive;
+    font-size: 10rem;
+  }
+
+  &__error-text {
+    font-size: 1.5rem;
+
+    .home-link {
+      animation: glow 2s ease-in-out infinite alternate;
+      text-decoration: none;
+    }
+  }
+
+  @-webkit-keyframes glow {
+    from {
+      color: $light-font;
+    }
+
+    to {
+      color: $not-found-text-hover;
+    }
+  }
+}

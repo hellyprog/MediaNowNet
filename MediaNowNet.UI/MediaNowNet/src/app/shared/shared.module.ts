@@ -1,16 +1,21 @@
 import { NgModule } from '@angular/core';
 
-import { HeaderComponent, FooterComponent } from './layout';
+import { HeaderComponent, FooterComponent, NotFoundComponent } from './components';
+import { RouterModule } from '@angular/router';
 
 @NgModule({
-  imports: [],
+  imports: [
+    RouterModule
+  ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   providers: [],
 })
