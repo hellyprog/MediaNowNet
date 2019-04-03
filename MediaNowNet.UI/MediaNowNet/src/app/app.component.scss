@@ -6,13 +6,9 @@
   flex-flow: column;
   min-height: 100vh;
   position: relative;
-  width: 100%;
 
   .content {
-    align-items: center;
     display: flex;
-    flex: 1 1 auto;
-    justify-content: center;
-    padding: 48px 20px 50px 20px;
+    flex: 1;
   }
 }

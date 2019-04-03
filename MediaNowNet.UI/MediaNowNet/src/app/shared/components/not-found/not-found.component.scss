@@ -1,5 +1,10 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
 @import '../../styles/colors';
+@import '../../styles/placeholders';
+
+:host(.not-found-component) {
+  @extend %route-component;
+}
 
 .not-found-container {
   align-items: center;
@@ -30,7 +35,7 @@
     }
 
     to {
-      color: $not-found-text-hover;
+      color: $glowing-text;
     }
   }
 }

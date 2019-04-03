@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 
 @Component({
   selector: 'app-not-found',
@@ -6,8 +6,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./not-found.component.scss']
 })
 export class NotFoundComponent implements OnInit {
+  classes: string = null;
 
-  constructor() { }
+  constructor() {
+    this.classes = 'not-found-component';
+  }
+
+  @HostBinding('class') get class() {
+    return this.classes;
+  }
 
   ngOnInit() {
   }
