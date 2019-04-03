@@ -1,11 +1,11 @@
 /* You can add global styles to this file, and also import other style files */
 @import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import './app/shared/styles/colors';
 
-* {
+html, body {
+  color: $light-font;
   font-family: 'Work Sans', sans-serif;
-}
-
-html, body, app-root {
+  font-size: 16px;
   height: 100%;
   margin: 0;
   padding: 0;
