@@ -1,14 +1,9 @@
 @import '../../../shared/styles/colors';
 
-.navigation {
+.header__container {
   background-color: $page-background;
-  height: 16px;
   padding: 16px;
   position: fixed;
   top: 0;
   width: 100%;
-
-  &__container {
-    //display: flex;
-  }
 }
