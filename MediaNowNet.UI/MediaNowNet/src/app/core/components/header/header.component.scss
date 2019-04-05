@@ -8,8 +8,6 @@
   height: auto;
   justify-content: space-between;
   padding: 16px;
-  position: fixed;
-  top: 0;
   width: 100%;
 
   .navigation {
@@ -45,7 +43,6 @@
 @media only screen and (max-width : 640px) {
   .header__container {
     display: block;
-    position: relative;
 
     .navigation {
 
