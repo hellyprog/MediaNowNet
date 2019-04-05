@@ -1,12 +1,16 @@
 @import url('https://fonts.googleapis.com/css?family=Press+Start+2P');
-@import '../../styles/colors';
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/placeholders';
+
+:host(.not-found-component) {
+  @extend %route-component;
+}
 
 .not-found-container {
   align-items: center;
   display: flex;
   flex-direction: column;
   font-weight: bold;
-  padding-bottom: 60px;
   text-align: center;
 
   &__error-number {
@@ -30,7 +34,7 @@
     }
 
     to {
-      color: $not-found-text-hover;
+      color: $glowing-text;
     }
   }
 }
