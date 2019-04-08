@@ -7,17 +7,17 @@ import { Component, OnInit, HostListener } from '@angular/core';
 })
 export class HeaderComponent implements OnInit {
   isActiveMenu = false;
-  isPageScrolled = false;
+  shouldColorChange = false;
 
   constructor() { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (offset > 100) {
-      this.isPageScrolled = true;
+    if (offset > 20) {
+      this.shouldColorChange = true;
     } else {
-      this.isPageScrolled = false;
+      this.shouldColorChange = false;
     }
   }
 
@@ -26,5 +26,6 @@ export class HeaderComponent implements OnInit {
 
   toggleMenu() {
     this.isActiveMenu = !this.isActiveMenu;
+    this.shouldColorChange = !this.shouldColorChange;
   }
 }
