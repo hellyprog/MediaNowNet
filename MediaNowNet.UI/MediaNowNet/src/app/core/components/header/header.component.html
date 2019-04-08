@@ -1,4 +1,4 @@
-<div class="header__container">
+<div class="header__container" [ngClass]="{'header__container--active': shouldColorChange}">
   <a [routerLink]="['/home']" class="header__logo">logo</a>
   <nav class="navigation">
       <a (click)='toggleMenu()' class="navigation__icon"><i class="fa fa-bars"></i></a>
