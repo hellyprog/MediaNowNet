@@ -14,10 +14,12 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
-    if (offset > 20) {
+    if (offset > 1) {
       this.shouldColorChange = true;
     } else {
-      this.shouldColorChange = false;
+      if (!this.isActiveMenu) {
+        this.shouldColorChange = false;
+      }
     }
   }
 
