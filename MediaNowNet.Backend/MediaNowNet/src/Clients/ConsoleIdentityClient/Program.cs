@@ -4,9 +4,9 @@ using System;
 using System.Net.Http;
 using System.Threading.Tasks;
 
-namespace Client
+namespace ConsoleIdentityClient
 {
-    public class Program
+    class Program
     {
         private static async Task Main()
         {
@@ -26,7 +26,7 @@ namespace Client
                 Address = disco.TokenEndpoint,
                 ClientId = "MNNClient",
                 ClientSecret = "secret",
-                
+
                 Scope = "api1"
             });
 
