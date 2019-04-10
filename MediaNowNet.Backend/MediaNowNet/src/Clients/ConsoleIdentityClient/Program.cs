@@ -21,12 +21,14 @@ namespace ConsoleIdentityClient
             }
 
             // request token
-            var tokenResponse = await client.RequestClientCredentialsTokenAsync(new ClientCredentialsTokenRequest
+            var tokenResponse = await client.RequestPasswordTokenAsync(new PasswordTokenRequest
             {
                 Address = disco.TokenEndpoint,
-                ClientId = "MNNClient",
+                ClientId = "ro.client",
                 ClientSecret = "secret",
 
+                UserName = "alice",
+                Password = "password",
                 Scope = "api1"
             });
 

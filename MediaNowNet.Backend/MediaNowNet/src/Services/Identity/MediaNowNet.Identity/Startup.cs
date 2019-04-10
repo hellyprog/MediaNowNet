@@ -13,10 +13,14 @@ namespace MediaNowNet.Identity
     {
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddMvc();
+
             var builder = services.AddIdentityServer()
-                .AddInMemoryIdentityResources(Config.GetIdentityResources())
                 .AddInMemoryApiResources(Config.GetApis())
-                .AddInMemoryClients(Config.GetClients());
+                .AddInMemoryClients(Config.GetClients())
+                .AddTestUsers(Config.GetUsers())
+                .AddInMemoryIdentityResources(Config.GetIdentityResources());
+
 
             builder.AddDeveloperSigningCredential();
         }
@@ -28,7 +32,9 @@ namespace MediaNowNet.Identity
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseStaticFiles();
             app.UseIdentityServer();
+            app.UseMvcWithDefaultRoute();
         }
     }
 }
