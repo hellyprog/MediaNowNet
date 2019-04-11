@@ -5,15 +5,20 @@
   background-color: $page-background;
   box-sizing: border-box;
   display: flex;
+  font-weight: 600;
   justify-content: space-between;
-  padding: 16px;
+  padding: 20px;
+  text-transform: uppercase;
   transition: 0.2s;
   transition-timing-function: ease-out;
   width: 100%;
 
   &--active {
     background-color: $active-header-background;
-    font-size: 1.1rem;
+
+    .navigation__link {
+      color: $light-font;
+    }
   }
 
   .navigation {
@@ -33,15 +38,11 @@
       flex-direction: row;
       justify-content: flex-end;
       list-style-type: none;
+      margin: 0;
     }
 
     &__item {
       padding-right: 15px;
-    }
-
-    &__link {
-      color: $light-font;
-      text-decoration: none;
     }
   }
 }
