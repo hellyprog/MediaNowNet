@@ -1,0 +1,9 @@
+@import '../../../../shared/styles/colors';
+
+.navigation {
+  &__link {
+    &--scrolled {
+      color: $light-font;
+    }
+  }
+}
