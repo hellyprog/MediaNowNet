@@ -1,10 +1,9 @@
 /* You can add global styles to this file, and also import other style files */
-@import url('https://fonts.googleapis.com/css?family=Work+Sans');
+@import url('https://fonts.googleapis.com/css?family=Rubik:700');
 @import './app/shared/styles/colors';
 
 html, body {
-  color: $light-font;
-  font-family: 'Work Sans', sans-serif;
+  color: $dark-font;
   font-size: 10px;
   height: 100%;
   margin: 0;
@@ -13,7 +12,12 @@ html, body {
 }
 
 body {
-  font: normal 1.4rem/1.45 Arial, sans-serif;
+  font: normal 1.4rem/1.45 'Rubik', sans-serif;
+}
+
+a, a:link, a:visited {
+  color: $dark-font;
+  text-decoration: none;
 }
 
 @media screen and (min-width: 48em) {

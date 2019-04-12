@@ -5,14 +5,28 @@
   background-color: $page-background;
   box-sizing: border-box;
   display: flex;
-  height: auto;
+  font-weight: 600;
   justify-content: space-between;
-  padding: 16px;
+  padding: 20px;
+  text-transform: uppercase;
+  transition: 0.2s;
+  transition-timing-function: ease-out;
   width: 100%;
+
+  &--active {
+    background-color: $active-header-background;
+    transition: none;
+
+    .navigation {
+      &__link,
+      &__icon {
+        color: $light-font;
+      }
+    }
+  }
 
   .navigation {
     &__icon {
-      color: $light-font;
       display: none;
       height: 20px;
       width: 20px;
@@ -27,15 +41,11 @@
       flex-direction: row;
       justify-content: flex-end;
       list-style-type: none;
+      margin: 0;
     }
 
     &__item {
       padding-right: 15px;
-    }
-
-    &__link {
-      color: $light-font;
-      text-decoration: none;
     }
   }
 }
@@ -52,10 +62,12 @@
         width: 100%;
 
         &--active {
+          background-color: $active-header-background;
           display: block;
           list-style: none;
           margin: 0;
           padding: 0;
+          z-index: 1;
         }
       }
 
