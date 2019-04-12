@@ -1,9 +1,11 @@
 @import '../../../../shared/styles/colors';
 
-.navigation {
-  &__link {
-    &--scrolled {
-      color: $light-font;
+.auth-buttons-container {
+  .navigation {
+    &__link {
+      &--active {
+        color: $light-font;
+      }
     }
   }
 }

@@ -15,6 +15,7 @@
 
   &--active {
     background-color: $active-header-background;
+    transition: none;
 
     .navigation {
       &__link,
