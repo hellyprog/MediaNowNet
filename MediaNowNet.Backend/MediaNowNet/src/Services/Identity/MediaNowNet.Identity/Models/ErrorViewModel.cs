@@ -1,6 +1,6 @@
 using System;
 
-namespace MVCIdentityClient.Models
+namespace MediaNowNet.Identity.Models
 {
     public class ErrorViewModel
     {

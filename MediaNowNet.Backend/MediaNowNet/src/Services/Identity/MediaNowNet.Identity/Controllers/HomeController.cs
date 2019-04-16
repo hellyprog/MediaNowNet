@@ -3,11 +3,10 @@ using System.Collections.Generic;
 using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
-using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using MVCIdentityClient.Models;
+using MediaNowNet.Identity.Models;
 
-namespace MVCIdentityClient.Controllers
+namespace MediaNowNet.Identity.Controllers
 {
     public class HomeController : Controller
     {
@@ -16,7 +15,6 @@ namespace MVCIdentityClient.Controllers
             return View();
         }
 
-        [Authorize]
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
