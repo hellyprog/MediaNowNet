@@ -30,11 +30,11 @@
 
   @-webkit-keyframes glow {
     from {
-      color: $light-font;
+      color: $glowing-text-start;
     }
 
     to {
-      color: $glowing-text;
+      color: $glowing-text-end;
     }
   }
 }
