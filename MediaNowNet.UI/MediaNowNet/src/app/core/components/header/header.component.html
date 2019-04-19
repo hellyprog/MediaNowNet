@@ -7,10 +7,18 @@
           <a href="#" class="navigation__link">Home</a>
         </li>
         <li class="navigation__item">
-          <app-auth-buttons
-            class="auth-buttons"
-            [shouldChangeColor]="shouldChangeColor"
-          ></app-auth-buttons>
+          <a href="javascript:void(0)"
+            class="navigation__link"
+            [ngClass]="{'navigation__link--active': shouldChangeColor}"
+            *ngIf="!isUserLoggedIn"
+            (click)="login()"
+          >Login</a>
+          <a href="javascript:void(0)"
+            class="navigation__link"
+            [ngClass]="{'navigation__link--active': shouldChangeColor}"
+            *ngIf="isUserLoggedIn"
+            (click)="logout()"
+          >Logout</a>
         </li>
       </ul>
   </nav>

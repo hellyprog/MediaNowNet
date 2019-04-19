@@ -6,10 +6,13 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
+  isUserLoggedIn: boolean;
   isActiveMenu = false;
   shouldChangeColor = false;
 
-  constructor() { }
+  constructor() {
+    this.isUserLoggedIn = localStorage.isLoggedIn;
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -24,6 +27,16 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+  }
+
+  login() {
+    localStorage.isLoggedIn = true;
+    this.isUserLoggedIn = true;
+  }
+
+  logout() {
+    localStorage.isLoggedIn = false;
+    this.isUserLoggedIn = false;
   }
 
   toggleMenu() {

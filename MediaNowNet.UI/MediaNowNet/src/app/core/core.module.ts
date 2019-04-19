@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { HeaderComponent, FooterComponent, NotFoundComponent } from './components';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
-import { AuthButtonsComponent } from './components/header/auth-buttons/auth-buttons.component';
 
 @NgModule({
   imports: [
@@ -17,8 +16,7 @@ import { AuthButtonsComponent } from './components/header/auth-buttons/auth-butt
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent,
-    AuthButtonsComponent
+    NotFoundComponent
   ],
   providers: [],
 })
