@@ -1,5 +1,8 @@
 <div class="header__container" [ngClass]="{'header__container--active': shouldChangeColor}">
-  <a [routerLink]="['/home']" class="header__logo">logo</a>
+  <a [routerLink]="['/home']" class="header__logo">
+    <img class="logo" *ngIf="!shouldChangeColor" src="../../../../assets/MNN.dark.png">
+    <img class="logo" *ngIf="shouldChangeColor" src="../../../../assets/MNN.white.png">
+  </a>
   <nav class="navigation">
       <a (click)='toggleMenu()' class="navigation__icon"><i class="fa fa-bars"></i></a>
       <ul class="navigation__list" [ngClass]="{'navigation__list--active': isActiveMenu}">
