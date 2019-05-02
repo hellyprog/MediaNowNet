@@ -1,0 +1,14 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/placeholders';
+
+:host(.not-found-component) {
+  @extend %route-component;
+}
+
+.home-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-transform: uppercase;
+}
