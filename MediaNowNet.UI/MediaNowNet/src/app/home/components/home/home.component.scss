@@ -1,7 +1,7 @@
 @import '../../../shared/styles/colors';
 @import '../../../shared/styles/placeholders';
 
-:host(.not-found-component) {
+:host(.home-component) {
   @extend %route-component;
 }
 
@@ -9,6 +9,5 @@
   align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: center;
   text-transform: uppercase;
 }

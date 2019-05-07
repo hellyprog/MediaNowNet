@@ -10,8 +10,8 @@ export class HomeComponent implements OnInit {
   classes: string = null;
 
   constructor(private titleService: Title) {
-    this.classes = 'not-found-component';
-    this.titleService.setTitle('Page not found - MediaNowNet');
+    this.classes = 'home-component';
+    this.titleService.setTitle('Home - MediaNowNet');
   }
 
   ngOnInit() {
