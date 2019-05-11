@@ -1,4 +1,5 @@
-import { Component, OnInit, HostListener } from '@angular/core';
+import { Component, OnInit, HostListener, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-header',
@@ -6,17 +7,19 @@ import { Component, OnInit, HostListener } from '@angular/core';
   styleUrls: ['./header.component.scss']
 })
 export class HeaderComponent implements OnInit {
-  isUserLoggedIn: boolean;
+  isUserLoggedIn = false;
   isActiveMenu = false;
   shouldChangeColor = false;
+  displayValue: string;
 
-  constructor() {
-    this.isUserLoggedIn = localStorage.isLoggedIn;
-  }
+  constructor(
+    private userService: UserService
+  ) { }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
     const offset = window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+
     if (offset > 1) {
       this.shouldChangeColor = true;
     } else {
@@ -27,16 +30,27 @@ export class HeaderComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.isLoggedIn();
   }
 
   login() {
-    localStorage.isLoggedIn = true;
-    this.isUserLoggedIn = true;
+    const { userService } = this;
+    this.isUserLoggedIn = userService.login();
+    this.isLoggedIn();
   }
 
   logout() {
-    localStorage.isLoggedIn = false;
-    this.isUserLoggedIn = false;
+    const { userService } = this;
+    this.isUserLoggedIn = userService.logout();
+    this.isLoggedIn();
+  }
+
+  isLoggedIn() {
+    if (this.isUserLoggedIn) {
+      this.displayValue = 'Logout';
+    } else {
+      this.displayValue = 'Login';
+    }
   }
 
   toggleMenu() {

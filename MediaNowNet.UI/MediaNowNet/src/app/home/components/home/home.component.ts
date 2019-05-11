@@ -8,10 +8,12 @@ import { Title } from '@angular/platform-browser';
 })
 export class HomeComponent implements OnInit {
   classes: string = null;
+  showSubscriptionMessage: boolean;
 
   constructor(private titleService: Title) {
     this.classes = 'home-component';
     this.titleService.setTitle('Home - MediaNowNet');
+    this.showSubscriptionMessage = !localStorage.isLoggedIn;
   }
 
   ngOnInit() {
