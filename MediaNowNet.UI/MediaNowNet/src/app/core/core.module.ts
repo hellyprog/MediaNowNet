@@ -21,6 +21,6 @@ import { HttpClientModule } from '@angular/common/http';
     FooterComponent,
     NotFoundComponent
   ],
-  providers: [UserService],
+  providers: [/*UserService*/],
 })
 export class CoreModule { }

@@ -13,15 +13,17 @@ const routes: Routes = [
     loadChildren: './home/home.module#HomeModule'
   },
   {
+    path: 'subscription',
+    loadChildren: './subscription/subscription.module#SubscriptionModule'
+  },
+  {
     path: '**',
     component: NotFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes, {
-    preloadingStrategy: PreloadAllModules
-  })],
+  imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
