@@ -1,15 +1,30 @@
 @import '../../../shared/styles/colors';
 @import '../../../shared/styles/placeholders';
+@import '../../../shared/styles/mixins';
 
 :host(.home-component) {
   @extend %route-component;
 }
 
-.home-container {
+.home__container {
   align-items: center;
   display: flex;
   flex-direction: column;
   height: 100%;
+  padding: 20px 0;
   text-transform: uppercase;
   width: 100%;
+
+  .subscription-message {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 30px 0;
+    width: 100%;
+  }
+
+  .start-trial-button {
+    @include standart-button;
+  }
 }
