@@ -17,14 +17,27 @@
 
   .subscription-message {
     align-items: center;
+    background-color: $dark-background;
+    color: $light-font;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 30px 0;
+    padding: 20px 0;
+    text-align: center;
     width: 100%;
-  }
 
-  .start-trial-button {
-    @include standart-button;
+    .start-trial-button {
+      @include standart-button;
+      background-color: $light-background;
+      color: $dark-font;
+    }
+
+    .primary-header {
+      padding: 15px 0;
+    }
+
+    .secondary-header {
+      padding: 15px 0 30px 0;
+    }
   }
 }

@@ -1,5 +1,5 @@
 import { Component, OnInit, HostListener, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
-//import { UserService } from '../../services/user/user.service';
+import { UserService } from '../../services/user/user.service';
 
 @Component({
   selector: 'app-header',
@@ -11,9 +11,9 @@ export class HeaderComponent implements OnInit {
   isActiveMenu = false;
   shouldChangeColor = false;
   displayValue: string;
-  userService: any;
+
   constructor(
-    //private userService: UserService
+    private userService: UserService
   ) { }
 
   @HostListener('window:scroll', [])
