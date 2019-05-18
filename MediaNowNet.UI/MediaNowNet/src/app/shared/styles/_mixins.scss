@@ -1,0 +1,17 @@
+@import './colors';
+
+@mixin standart-button {
+    border: none;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    outline: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: ease 0.1s;
+
+    &:hover {
+        transform: translateY(-3px);
+    }
+}
