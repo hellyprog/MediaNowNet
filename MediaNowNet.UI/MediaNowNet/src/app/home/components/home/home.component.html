@@ -5,26 +5,9 @@
     <button class="start-trial-button" [routerLink]="['/subscription']" routerLinkActive="router-link-active" >Start your free trial</button>
   </div>
   <div>
-    <div>Trending</div>
-    <div>Films</div>
-    <div>Series</div>
-    <div>MNN Originals</div>
-
-    <div>Trending</div>
-    <div>Films</div>
-    <div>Series</div>
-    <div>MNN Originals</div>
-    <div>Trending</div>
-    <div>Films</div>
-    <div>Series</div>
-    <div>MNN Originals</div>
-    <div>Trending</div>
-    <div>Films</div>
-    <div>Series</div>
-    <div>MNN Originals</div>
-    <div>Trending</div>
-    <div>Films</div>
-    <div>Series</div>
-    <div>MNN Originals</div>
+    <div class="chapter">
+      <div class="chapter-title">Trending</div>
+      <app-image-slideshow [displayItems]="trendingFilms"></app-image-slideshow>
+    </div>
   </div>
 </div>
