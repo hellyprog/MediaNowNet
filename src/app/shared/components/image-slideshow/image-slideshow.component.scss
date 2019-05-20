@@ -1,0 +1,39 @@
+.slideshow-container {
+  box-sizing: border-box;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 20px;
+  width: 100%;
+
+  .image-container {
+    height: auto;
+    max-width: 20%;
+    padding-bottom: 15px;
+
+    .image {
+      height: 90%;
+      width: 100%;
+
+      &:hover {
+        transform: scale(1.05);
+        transition: transform 0.5s ease-out 0s;
+      }
+    }
+
+    .title {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width : 640px) {
+  .slideshow-container {
+    align-items: center;
+    flex-direction: column;
+
+    .image-container {
+      max-width: 50%;
+    }
+  }
+}
