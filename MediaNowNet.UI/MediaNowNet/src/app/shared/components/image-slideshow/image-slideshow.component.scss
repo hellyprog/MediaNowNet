@@ -25,14 +25,11 @@
 
 @media only screen and (max-width : 640px) {
   .slideshow-container {
-    align-items: center;
-
     .image-container {
       max-width: 40%;
 
-      .title {
-        overflow: hidden;
-        white-space: nowrap;
+      .image {
+        height: auto;
       }
     }
   }
