@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
+import { Title } from '@angular/platform-browser';
 
 @Component({
   selector: 'app-subscription',
@@ -6,10 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./subscription.component.scss']
 })
 export class SubscriptionComponent implements OnInit {
+  classes: string = null;
 
-  constructor() { }
+  constructor(private titleService: Title) {
+    this.classes = 'subscription-component';
+    this.titleService.setTitle('Home - MediaNowNet');
+  }
 
   ngOnInit() {
   }
 
+  @HostBinding('class') get class() {
+    return this.classes;
+  }
 }
