@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700');
 @import './app/shared/styles/colors';
 
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
 html, body {
   color: $dark-font;
   font-size: 10px;
