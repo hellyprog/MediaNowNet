@@ -1,0 +1,12 @@
+<div class="plan-card-container">
+  <div class="plan-name">{{plan.name}}</div>
+  <div class="priceline-info">Get 1 month free, then starts at</div>
+  <div class="priceline">
+    <div class="price">${{plan.price}} /</div>
+    <p class="period">month</p>
+  </div>
+  <button class="select-plan-button">Select Plan</button>
+  <ul class="plan-conditions">
+    <li class="condition" *ngFor="let condition of plan.conditions">{{condition}}</li>
+  </ul>
+</div>

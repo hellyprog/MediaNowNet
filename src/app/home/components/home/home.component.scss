@@ -11,7 +11,6 @@
   display: flex;
   flex-direction: column;
   height: 100%;
-  padding: 20px 0;
   text-transform: uppercase;
   width: 100%;
 
@@ -35,6 +34,7 @@
     .primary-header {
       border-bottom: 5px solid;
       font-size: 2rem;
+      font-weight: bold;
       padding: 15px 0;
     }
 
@@ -48,7 +48,8 @@
     
     .chapter-title {
       font-size: 1.5em;
-      padding: 10px 0 10px 20px;
+      font-weight: bold;
+      padding: 10px 0 10px 5px;
     }
   }
 }
