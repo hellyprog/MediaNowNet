@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { SubscriptionComponent } from './components/subscription/subscription.component';
 import { SubscriptionRoutingModule } from './subscription-routing.module';
 import { PlanCardComponent } from './components/plan-card/plan-card.component';
+import { SharedModule } from '../shared';
 
 @NgModule({
   declarations: [
@@ -11,6 +12,7 @@ import { PlanCardComponent } from './components/plan-card/plan-card.component';
   ],
   imports: [
     CommonModule,
+    SharedModule,
     SubscriptionRoutingModule
   ]
 })
