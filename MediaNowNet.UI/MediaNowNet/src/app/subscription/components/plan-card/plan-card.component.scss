@@ -17,11 +17,41 @@
     transform: translateY(-15px);
   }
 
+  .plan-name {
+    font-size: 0.9em;
+    font-weight: bold;
+    padding: 15px 0;
+  }
+
+  .priceline-info {
+    font-weight: 300;
+    padding: 5px;
+  }
+
+  .priceline {
+    align-items: center;
+    color: $secondary-dark-font;
+    display: flex;
+    font-weight: 300;
+
+    .price {
+      font-size: 4rem;
+      margin: 0;
+    }
+
+    .period {
+      align-self: flex-end;
+      margin: 0;
+      padding-bottom: 10px;
+      text-transform: lowercase;
+    }
+  }
+
   .select-plan-button {
     @include color-filling-button($dark-background, $light-font);
     background: $white-background;
     color: $dark-font;
-    width: 35%;
+    width: fit-content;
   }
 }
 
