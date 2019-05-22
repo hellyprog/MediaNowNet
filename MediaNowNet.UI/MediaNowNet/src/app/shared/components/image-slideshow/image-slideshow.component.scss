@@ -2,6 +2,7 @@
   box-sizing: border-box;
   display: flex;
   flex-wrap: wrap;
+  justify-content: space-around;
   padding: 0 20px;
   width: 100%;
 
@@ -64,14 +65,6 @@
       flex-shrink: 0;
       margin: 0 5px;
       width: 40%;
-
-      .image-wrapper {
-        height: auto;
-
-        .overlay {
-          height: 97%;
-        }
-      }
     }
   }
 }

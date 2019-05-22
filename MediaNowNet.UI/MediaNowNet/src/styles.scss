@@ -2,6 +2,19 @@
 @import url('https://fonts.googleapis.com/css?family=Rubik:700');
 @import './app/shared/styles/colors';
 
+@font-face {
+  font-family: 'Rubik';
+  src: url('https://fonts.googleapis.com/css?family=Rubik:400') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  }
+  @font-face {
+  font-family: 'Rubik';
+  src: url('https://fonts.googleapis.com/css?family=Rubik:700') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+   }
+
 *, *:before, *:after {
   box-sizing: border-box;
 }
