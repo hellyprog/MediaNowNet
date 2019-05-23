@@ -1,7 +1,28 @@
 @import '../../../shared/styles/colors';
 
 .footer-container {
-  background-color: $light-background;
-  height: 5vh;
+  background-color: $dark-background;
+  color: $light-font;
+  display: flex;
+  height: 100%;
   width: 100%;
+
+  .footer-menu {
+    display: flex;
+    justify-content: flex-start;
+    list-style: none;
+
+    .item {
+      cursor: pointer;
+      padding: 0 10px;
+
+      &:last-of-type {
+
+      }
+
+      .link {
+        color: $light-font;
+      }
+    }
+  }
 }
