@@ -1,3 +1,6 @@
-<p>
-  subscription works!
-</p>
+<div class="subscription-container">
+  <div class="title">Select your plan</div>
+  <div class="cards-container">
+    <app-plan-card *ngFor="let plan of plans" [plan]="plan"></app-plan-card>
+  </div>
+</div>

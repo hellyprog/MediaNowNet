@@ -13,5 +13,23 @@
 
     &:hover {
         transform: translateY(-3px);
+      }
+}
+
+@mixin color-filling-button($bg-color, $font-color) {
+    border: 2px solid $dark-border;
+    cursor: pointer;
+    font-family: 'Rubik', sans-serif;
+    font-size: 1.3rem;
+    font-weight: bold;
+    outline: none;
+    padding: 10px 15px;
+    text-transform: uppercase;
+    transition: ease 0.1s;
+
+    &:hover {
+        background-color: $bg-color;
+        border: 2px solid $bg-color;
+        color: $font-color;
     }
 }
