@@ -26,3 +26,12 @@
     }
   }
 }
+
+@media only screen and (max-width: 640px) {
+  .footer-container {
+    .footer-menu {
+      flex-direction: column;
+      padding-top: 10px;
+    }
+  }
+}
