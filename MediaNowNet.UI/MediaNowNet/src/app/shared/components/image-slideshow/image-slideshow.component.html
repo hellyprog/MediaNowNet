@@ -1,7 +1,7 @@
 <div class="slideshow-container">
   <div *ngFor="let item of displayItems" class="image-container">
     <div class="image-wrapper">
-      <img src="{{item.posterUrl}}" class="image">
+      <img src="{{item.posterUrl}}" class="image" alt="{{item.title}}">
       <div class="overlay">
         <svg width="60px" height="60px" viewBox="0 0 60 60" class="cu-button-detail">
           <circle id="circle" fill-opacity="0.2" cx="30" cy="30" r="29" stroke="#FFFFFF" stroke-width="1.5"></circle>
