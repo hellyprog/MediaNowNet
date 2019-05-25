@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UserService } from '../../../core/services/user/user.service';
+import { IWatchable } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-home',

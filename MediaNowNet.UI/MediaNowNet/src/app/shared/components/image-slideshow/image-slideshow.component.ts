@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { IWatchable } from 'src/app/shared/interfaces';
 
 @Component({
   selector: 'app-image-slideshow',
