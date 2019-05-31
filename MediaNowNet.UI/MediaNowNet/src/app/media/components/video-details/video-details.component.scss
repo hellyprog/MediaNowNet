@@ -1,0 +1,55 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/placeholders';
+@import '../../../shared/styles/mixins';
+
+:host(.video-details-component) {
+  @extend %route-component;
+}
+
+.video-details-container {
+  display: flex;
+  height: 100%;
+  text-transform: uppercase;
+  width: 100%;
+
+  .video-block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 70%;
+    padding: 25px;
+
+    .video-container {
+      height: auto;
+      width: 100%;
+
+      video {
+        display: flex;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .title {
+      font-weight: bold;
+      padding: 5px;
+      width: 100%;
+    }
+
+    .details {
+      align-self: flex-start;
+      max-width: 50%;
+      padding: 5px;
+    }
+  }
+}
+
+@media only screen and (max-width : 640px) {
+  .video-details-container {
+    .video-block {
+      max-width: 100%;
+      padding: 0;
+    }
+  }
+}
