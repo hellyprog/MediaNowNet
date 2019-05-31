@@ -7,4 +7,7 @@ export class Movie {
   public rating: number;
   public title: string;
   public year: number;
+
+  constructor() {
+  }
 }

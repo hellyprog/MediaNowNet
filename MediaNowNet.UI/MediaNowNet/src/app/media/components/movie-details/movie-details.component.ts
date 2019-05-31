@@ -13,14 +13,13 @@ export class MovieDetailsComponent implements OnInit {
 
   constructor(private route: ActivatedRoute) {
     this.classes = 'movie-details-component';
-    // this.movie = {
-    //   id: +this.route.snapshot.paramMap.get('id'),
-    //   title: 'IT 2',
-    //   posterUrl: '../../../assets/posters/it_2.jpg'
-    // };
   }
 
   ngOnInit() {
+    this.movie = new Movie();
+    this.movie.id = +this.route.snapshot.paramMap.get('id');
+    this.movie.title = 'IT 2';
+    this.movie.posterUrl = '../../../assets/posters/it_2.jpg';
   }
 
   @HostBinding('class') get class() {

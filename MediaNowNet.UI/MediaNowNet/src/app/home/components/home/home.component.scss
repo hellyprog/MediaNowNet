@@ -45,11 +45,31 @@
 
   .chapter {
     padding: 15px 0;
-    
+
     .chapter-title {
       font-size: 1.5em;
       font-weight: bold;
-      padding: 10px 0 10px 5px;
+      padding: 10px 0 10px 20px;
+      pointer-events: none;
+      transition: ease-in-out 0.3s;
+
+      &:hover {
+        transform: translateX(10px);
+      }
+
+      .board-link {
+        pointer-events: auto;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .home__container {
+    .chapter {
+      .chapter-title {
+        padding: 10px 0 10px 5px;
+      }
     }
   }
 }
