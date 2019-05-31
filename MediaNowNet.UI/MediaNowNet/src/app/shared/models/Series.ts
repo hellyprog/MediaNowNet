@@ -1,9 +1,9 @@
-import { IWatchable } from '../interfaces';
+import { Season } from './Season';
 
-export class Series implements IWatchable {
+export class Series {
   public id: number;
-  public title: string;
   public posterUrl: string;
-  public startYear: number;
-  public endYear: number;
+  public rating: number;
+  public seasons: Season[];
+  public title: string;
 }

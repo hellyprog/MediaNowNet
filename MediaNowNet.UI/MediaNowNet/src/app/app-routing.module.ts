@@ -14,7 +14,7 @@ const routes: Routes = [
     path: 'subscription',
     loadChildren: './subscription/subscription.module#SubscriptionModule'
   }, {
-    path: 'watch/:id',
+    path: 'watch',
     loadChildren: './media/media.module#MediaModule'
   }, {
     path: '**',

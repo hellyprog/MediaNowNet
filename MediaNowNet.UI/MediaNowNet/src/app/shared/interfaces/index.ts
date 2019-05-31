@@ -1,1 +1,1 @@
-export * from './IWatchable';
+export * from './IVideo';

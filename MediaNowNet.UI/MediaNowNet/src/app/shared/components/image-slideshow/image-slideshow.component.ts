@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { IWatchable } from 'src/app/shared/interfaces';
+import { IVideo } from 'src/app/shared/interfaces';
 import { Router } from '@angular/router';
+import { VideoType } from '../../enums';
 
 @Component({
   selector: 'app-image-slideshow',
@@ -8,14 +9,16 @@ import { Router } from '@angular/router';
   styleUrls: ['./image-slideshow.component.scss']
 })
 export class ImageSlideshowComponent implements OnInit {
-  @Input() displayItems: IWatchable[];
+  @Input() displayItems: IVideo[];
 
   constructor(private router: Router) {}
 
   ngOnInit() {
   }
 
-  getDetails(id: number) {
-    this.router.navigate(['/watch', id]);
+  getDetails(item: IVideo) {
+    const url = item.type === VideoType.Movie ? '/watch/movie' : '/watch/series';
+
+    this.router.navigate([url, item.id]);
   }
 }

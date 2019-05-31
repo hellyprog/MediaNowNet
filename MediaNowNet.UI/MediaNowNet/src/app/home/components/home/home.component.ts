@@ -1,7 +1,8 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { Title } from '@angular/platform-browser';
 import { UserService } from '../../../core/services/user/user.service';
-import { IWatchable } from 'src/app/shared/interfaces';
+import { IVideo } from 'src/app/shared/interfaces';
+import { VideoType } from 'src/app/shared/enums';
 
 @Component({
   selector: 'app-home',
@@ -11,8 +12,8 @@ import { IWatchable } from 'src/app/shared/interfaces';
 export class HomeComponent implements OnInit {
   classes: string = null;
   showSubscriptionMessage: boolean;
-  trendingFilms: IWatchable[];
-  movies: IWatchable[];
+  trendingFilms: IVideo[];
+  movies: IVideo[];
 
   constructor(
     private titleService: Title,
@@ -36,23 +37,28 @@ export class HomeComponent implements OnInit {
       {
         id: 1,
         title: 'Avengers Endgame',
-        posterUrl: '../../../assets/posters/avengers_endgame.jpg'
+        posterUrl: '../../../assets/posters/avengers_endgame.jpg',
+        type: VideoType.Movie
       }, {
         id: 2,
         title: 'Braveheart',
-        posterUrl: '../../../assets/posters/braveheart.jpg'
+        posterUrl: '../../../assets/posters/braveheart.jpg',
+        type: VideoType.Movie
       }, {
         id: 3,
         title: 'Captain Marvel',
-        posterUrl: '../../../assets/posters/captain_marvel.jpg'
+        posterUrl: '../../../assets/posters/captain_marvel.jpg',
+        type: VideoType.Movie
       }, {
         id: 4,
         title: 'It 2',
-        posterUrl: '../../../assets/posters/it_2.jpg'
+        posterUrl: '../../../assets/posters/it_2.jpg',
+        type: VideoType.Movie
       }, {
         id: 5,
         title: 'Venom',
-        posterUrl: '../../../assets/posters/venom.jpg'
+        posterUrl: '../../../assets/posters/venom.jpg',
+        type: VideoType.Movie
       }
     ];
 
@@ -60,23 +66,28 @@ export class HomeComponent implements OnInit {
       {
         id: 6,
         title: 'John Wick 3',
-        posterUrl: '../../../assets/posters/john_wick_3.jpg'
+        posterUrl: '../../../assets/posters/john_wick_3.jpg',
+        type: VideoType.Movie
       }, {
         id: 7,
         title: 'Punisher',
-        posterUrl: '../../../assets/posters/punisher.jpg'
+        posterUrl: '../../../assets/posters/punisher.jpg',
+        type: VideoType.Series
       }, {
         id: 8,
         title: 'Mission Impossible: Fallout',
-        posterUrl: '../../../assets/posters/mission_impossible_fallout.jpg'
+        posterUrl: '../../../assets/posters/mission_impossible_fallout.jpg',
+        type: VideoType.Movie
       }, {
         id: 9,
         title: 'Godzilla: King of Monsters',
-        posterUrl: '../../../assets/posters/godzilla_king_of_monsters.jpg'
+        posterUrl: '../../../assets/posters/godzilla_king_of_monsters.jpg',
+        type: VideoType.Movie
       }, {
         id: 10,
         title: 'Spider-Man: Into the Spider-Verse',
-        posterUrl: '../../../assets/posters/spider_man_into_the_spider-verse.jpg'
+        posterUrl: '../../../assets/posters/spider_man_into_the_spider-verse.jpg',
+        type: VideoType.Movie
       }
     ];
   }
