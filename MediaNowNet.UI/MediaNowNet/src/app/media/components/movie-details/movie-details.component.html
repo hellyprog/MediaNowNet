@@ -1,0 +1,23 @@
+<div class="movie-details-container">
+  <div class="movie-block">
+    <div class="movie-container">
+      <video width="1080" height="720" controls>
+        <source src="../../../../assets/video/small.mp4" type="video/mp4">
+        Your browser does not support the video tag.
+      </video>
+    </div>
+    <div class="title">
+      {{movie.title}}
+    </div>
+    <div class="details">
+      <div class="poster">
+          <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
+      </div>
+      <div class="text-info">
+        <div>Year: {{movie.year}}</div>
+        <div>Genre: {{movie.genre}}</div>
+        <div>Description: {{movie.description}}</div>
+      </div>
+    </div>
+  </div>
+</div>

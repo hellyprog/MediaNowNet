@@ -1,7 +1,7 @@
 <div class="header__container" [ngClass]="{'header__container--active': shouldChangeColor}">
   <a [routerLink]="['/home']" class="header__logo">
-    <img class="logo" *ngIf="!shouldChangeColor" src="../../../../assets/mnn-logo.dark.svg">
-    <img class="logo" *ngIf="shouldChangeColor" src="../../../../assets/mnn-logo.white.svg">
+    <img class="logo" *ngIf="!shouldChangeColor" src="../../../../assets/mnn-logo.dark.svg" alt="MediaNowNet">
+    <img class="logo" *ngIf="shouldChangeColor" src="../../../../assets/mnn-logo.white.svg" alt="MediaNowNet">
   </a>
   <nav class="navigation">
       <a (click)='toggleMenu()' class="navigation__icon"><i class="fa fa-bars"></i></a>
@@ -9,6 +9,13 @@
         <li class="navigation__item">
           <a href="#" class="navigation__link">Home</a>
         </li>
+        <li class="navigation__item">
+          <a [routerLink]="['/movies']" class="navigation__link">Movies</a>
+        </li>
+        <li class="navigation__item">
+          <a [routerLink]="['/series']" class="navigation__link">Series</a>
+        </li>
+        <li class="navigation__delimiter">|</li>
         <li class="navigation__item">
           <a href="javascript:void(0)"
             class="navigation__link"

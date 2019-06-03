@@ -1,0 +1,80 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/placeholders';
+@import '../../../shared/styles/mixins';
+
+:host(.movie-details-component) {
+  @extend %route-component;
+}
+
+.movie-details-container {
+  display: flex;
+  height: 100%;
+  text-transform: uppercase;
+  width: 100%;
+
+  .movie-block {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: fit-content;
+    max-width: 70%;
+    padding: 25px;
+
+    .movie-container {
+      height: auto;
+      width: 100%;
+
+      video {
+        display: flex;
+        height: auto;
+        width: 100%;
+      }
+    }
+
+    .title {
+      border-bottom: 1px solid $alpha-border;
+      font-weight: bold;
+      padding: 5px;
+      width: 100%;
+    }
+
+    .details {
+      align-self: flex-start;
+      display: flex;
+      padding: 5px;
+
+      .text-info {
+        padding-left: 10px;
+        width: 50%;
+      }
+
+      .poster {
+        width: 20%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width : 640px) {
+  .movie-details-container {
+    .movie-block {
+      max-width: 100%;
+      padding: 0;
+
+      .details {
+        .poster {
+          width: 40%;
+        }
+
+        .text-info {
+          width: 60%;
+        }
+      }
+    }
+  }
+}

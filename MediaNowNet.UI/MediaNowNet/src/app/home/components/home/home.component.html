@@ -2,7 +2,7 @@
   <div *ngIf="showSubscriptionMessage" class="subscription-message">
     <div class="primary-header">All Your TV In One Place</div>
     <div class="secondary-header">Watch thousands of shows and movies, with plans starting at $5.99/month</div>
-    <button class="start-trial-button" [routerLink]="['/subscription']" routerLinkActive="router-link-active" >Start your free trial</button>
+    <button class="start-trial-button" [routerLink]="['/subscription']">Start your free trial</button>
   </div>
   <div>
     <div class="chapter">
@@ -10,7 +10,7 @@
       <app-image-slideshow [displayItems]="trendingFilms"></app-image-slideshow>
     </div>
     <div class="chapter">
-      <div class="chapter-title">Movies</div>
+      <div class="chapter-title"><a [routerLink]="['/movies']" class="board-link">Movies <i class="fa fa-caret-right"></i></a></div>
       <app-image-slideshow [displayItems]="movies"></app-image-slideshow>
     </div>
   </div>

@@ -7,23 +7,25 @@ const routes: Routes = [
     path: '',
     pathMatch: 'full',
     redirectTo: 'home'
-  },
-  {
+  }, {
     path: 'home',
     loadChildren: './home/home.module#HomeModule'
-  },
-  {
+  }, {
     path: 'subscription',
     loadChildren: './subscription/subscription.module#SubscriptionModule'
-  },
-  {
+  }, {
+    path: 'watch',
+    loadChildren: './media/media.module#MediaModule'
+  }, {
     path: '**',
     component: NotFoundComponent
   }
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forRoot(routes, {
+    scrollPositionRestoration: 'top'
+  })],
   exports: [RouterModule]
 })
 export class AppRoutingModule { }

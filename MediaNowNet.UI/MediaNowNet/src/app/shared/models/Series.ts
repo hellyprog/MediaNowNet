@@ -1,6 +1,10 @@
-class Series implements IWatchable {
-  public title: string;
+import { Season } from './Season';
+
+export class Series {
+  public description: string;
+  public id: number;
   public posterUrl: string;
-  public startYear: number;
-  public endYear: number;
+  public rating: number;
+  public seasons: Season[];
+  public title: string;
 }
