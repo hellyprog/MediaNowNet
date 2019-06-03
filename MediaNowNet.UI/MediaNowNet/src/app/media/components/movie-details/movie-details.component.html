@@ -10,9 +10,14 @@
       {{movie.title}}
     </div>
     <div class="details">
-      <div>Year: 2015</div>
-      <div>Genre: comedy</div>
-      <div>Description: some cool description for this amazing video, I have no idea what to write here</div>
+      <div class="poster">
+          <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
+      </div>
+      <div class="text-info">
+        <div>Year: {{movie.year}}</div>
+        <div>Genre: {{movie.genre}}</div>
+        <div>Description: {{movie.description}}</div>
+      </div>
     </div>
   </div>
 </div>

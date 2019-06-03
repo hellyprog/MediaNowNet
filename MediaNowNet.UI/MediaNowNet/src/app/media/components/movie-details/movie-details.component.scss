@@ -40,8 +40,22 @@
 
     .details {
       align-self: flex-start;
-      max-width: 50%;
+      display: flex;
       padding: 5px;
+
+      .text-info {
+        padding-left: 10px;
+        width: 50%;
+      }
+
+      .poster {
+        width: 20%;
+
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
     }
   }
 }
@@ -51,6 +65,16 @@
     .movie-block {
       max-width: 100%;
       padding: 0;
+
+      .details {
+        .poster {
+          width: 40%;
+        }
+
+        .text-info {
+          width: 60%;
+        }
+      }
     }
   }
 }

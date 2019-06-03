@@ -10,6 +10,13 @@
           <a href="#" class="navigation__link">Home</a>
         </li>
         <li class="navigation__item">
+          <a [routerLink]="['/movies']" class="navigation__link">Movies</a>
+        </li>
+        <li class="navigation__item">
+          <a [routerLink]="['/series']" class="navigation__link">Series</a>
+        </li>
+        <li class="navigation__delimiter">|</li>
+        <li class="navigation__item">
           <a href="javascript:void(0)"
             class="navigation__link"
             [ngClass]="{'navigation__link--active': shouldChangeColor}"

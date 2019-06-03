@@ -19,7 +19,8 @@
 
     .navigation {
       &__link,
-      &__icon {
+      &__icon,
+      &__delimiter {
         color: $light-font;
       }
     }
@@ -51,6 +52,10 @@
     }
 
     &__item {
+      padding-right: 15px;
+    }
+
+    &__delimiter {
       padding-right: 15px;
     }
   }
@@ -96,6 +101,10 @@
         position: absolute;
         right: 15px;
         top: 20px;
+      }
+
+      &__delimiter {
+        display: none;
       }
     }
   }

@@ -20,6 +20,9 @@ export class MovieDetailsComponent implements OnInit {
     this.movie.id = +this.route.snapshot.paramMap.get('id');
     this.movie.title = 'IT 2';
     this.movie.posterUrl = '../../../assets/posters/it_2.jpg';
+    this.movie.description = 'SOME COOL DESCRIPTION FOR THIS AMAZING VIDEO, I HAVE NO IDEA WHAT TO WRITE HERE';
+    this.movie.genre = 'comedy';
+    this.movie.year = 2016;
   }
 
   @HostBinding('class') get class() {
