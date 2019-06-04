@@ -12,8 +12,19 @@
     transition: ease 0.1s;
 
     &:hover {
-        transform: translateY(-3px);
-      }
+      transform: translateY(-3px);
+    }
+}
+
+@mixin empty-button {
+  border: none;
+  cursor: pointer;
+  font-family: 'Rubik', sans-serif;
+  font-size: 1.3rem;
+  font-weight: bold;
+  outline: none;
+  text-transform: uppercase;
+  transition: ease 0.1s;
 }
 
 @mixin color-filling-button($bg-color, $font-color) {

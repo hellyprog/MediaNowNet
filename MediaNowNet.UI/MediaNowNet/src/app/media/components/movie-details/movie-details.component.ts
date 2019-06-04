@@ -1,6 +1,7 @@
 import { Component, OnInit, HostBinding } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Movie } from 'src/app/shared/models';
+import { VoteStatus } from 'src/app/shared/enums/VoteStatus';
 
 @Component({
   selector: 'app-movie-details',
@@ -23,6 +24,10 @@ export class MovieDetailsComponent implements OnInit {
     this.movie.description = 'SOME COOL DESCRIPTION FOR THIS AMAZING VIDEO, I HAVE NO IDEA WHAT TO WRITE HERE';
     this.movie.genre = 'comedy';
     this.movie.year = 2016;
+    this.movie.rating = 7.7;
+    this.movie.upvotes = 1545;
+    this.movie.downvotes = 345;
+    this.movie.voteStatus = VoteStatus.None;
   }
 
   @HostBinding('class') get class() {

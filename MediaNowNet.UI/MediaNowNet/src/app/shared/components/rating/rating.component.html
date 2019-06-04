@@ -1,0 +1,20 @@
+<div class="rating-container">
+  <div class="rating-block">
+    <div class="vote-block">
+        <button
+          class="upvote-button"
+          [ngClass]="{'upvote-button--active': hasUserUpvoted}"
+          (click)="upvote()"
+        ><i class="fa fa-thumbs-up"></i></button>
+        <div class="vote-number">{{upvotes}}</div>
+        <div class="vote-delimiter"></div>
+        <button
+          class="downvote-button"
+          [ngClass]="{'downvote-button--active': hasUserDownvoted}"
+          (click)="downvote()"
+        ><i class="fa fa-thumbs-down"></i></button>
+        <div class="vote-number">{{downvotes}}</div>
+    </div>
+    <div class="votes">User votes: {{+upvotes + +downvotes}}</div>
+  </div>
+</div>

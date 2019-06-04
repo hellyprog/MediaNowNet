@@ -1,0 +1,72 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/mixins';
+.rating-container {
+  display: flex;
+  width: 100%;
+
+  .rating-block {
+    align-items: flex-end;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+
+    .votes {
+      font-size: 0.6em;
+      font-weight: normal;
+      text-align: center;
+    }
+  }
+
+  .vote-block {
+    align-items: flex-end;
+    display: flex;
+
+    .upvote-button,
+    .downvote-button {
+      @include empty-button;
+      background-color: $light-background;
+      color: $dark-font;
+      font-size: 1.3em;
+
+      &--active {
+        .fa-thumbs-up,
+        .fa-thumbs-down {
+          color: $dark-background;
+        }
+      }
+    }
+
+    .upvote-button {
+      &:hover {
+        .fa-thumbs-up {
+          color: $dark-background;
+        }
+      }
+    }
+
+    .downvote-button {
+      &:hover {
+        .fa-thumbs-down {
+          color: $dark-background;
+        }
+      }
+    }
+
+    .vote-number {
+      font-size: 0.8em;
+    }
+
+    .vote-delimiter {
+      padding: 0 15px;
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .rating-container {
+    .rating-block {
+      align-items: center;
+    }
+  }
+}

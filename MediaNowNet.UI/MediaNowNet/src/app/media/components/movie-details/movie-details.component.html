@@ -6,12 +6,16 @@
         Your browser does not support the video tag.
       </video>
     </div>
-    <div class="title">
-      {{movie.title}}
+    <div class="title-row">
+      <div class="title">
+        {{movie.title}}
+      </div>
+      <app-rating class="rating" upvotes="{{movie.upvotes}}" downvotes="{{movie.downvotes}}" voteStatus="{{movie.voteStatus}}"></app-rating>
     </div>
     <div class="details">
       <div class="poster">
-          <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
+        <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
+        <a href="{{movie.posterUrl}}" class="download-poster-link" download>(Download)</a>
       </div>
       <div class="text-info">
         <div>Year: {{movie.year}}</div>
