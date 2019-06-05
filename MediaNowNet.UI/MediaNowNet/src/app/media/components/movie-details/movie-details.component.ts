@@ -37,7 +37,7 @@ export class MovieDetailsComponent implements OnInit {
     return this.classes;
   }
 
-  toggleDetails() {
+  toggleDetails(detailsId: string) {
     this.showDetails = !this.showDetails;
   }
 }

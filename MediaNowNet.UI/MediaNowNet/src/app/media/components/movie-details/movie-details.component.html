@@ -12,8 +12,8 @@
       </div>
       <app-rating class="rating" upvotes="{{movie.upvotes}}" downvotes="{{movie.downvotes}}" voteStatus="{{movie.voteStatus}}"></app-rating>
     </div>
-    <button (click)="toggleDetails()"></button>
-    <div class="details" *ngIf="showDetails">
+    <button (click)="toggleDetails(movie.title)" class="expander">{{(showDetails) ? 'Hide' : 'Show'}} details <i class="fa {{(showDetails) ? 'fa-chevron-up' : 'fa-chevron-down'}}"></i></button>
+    <div class="details" id="{{movie.title}}" *ngIf="showDetails">
       <div class="poster">
         <img src="{{movie.posterUrl}}" alt="{{movie.title}}">
         <a href="{{movie.posterUrl}}" class="download-poster-link" download>(Download)</a>

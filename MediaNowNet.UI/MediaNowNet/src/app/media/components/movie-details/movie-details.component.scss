@@ -52,6 +52,19 @@
       }
     }
 
+    .expander {
+      @include empty-button;
+      background-color: $light-background;
+      color: $dark-font;
+      width: 100%;
+
+      &:hover {
+        .fa {
+          animation: bounce 1s infinite linear;
+        }
+      }
+    }
+
     .details {
       align-self: flex-start;
       display: flex;
@@ -109,5 +122,20 @@
         }
       }
     }
+  }
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0);
+  }
+  25% {
+    transform: translateY(2px);
+  }
+  75% {
+    transform: translateY(-2px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
