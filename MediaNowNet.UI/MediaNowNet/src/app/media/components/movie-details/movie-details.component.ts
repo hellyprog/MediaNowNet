@@ -11,6 +11,7 @@ import { VoteStatus } from 'src/app/shared/enums/VoteStatus';
 export class MovieDetailsComponent implements OnInit {
   classes: string = null;
   movie: Movie = null;
+  showDetails: boolean;
 
   constructor(private route: ActivatedRoute) {
     this.classes = 'movie-details-component';
@@ -28,9 +29,15 @@ export class MovieDetailsComponent implements OnInit {
     this.movie.upvotes = 1545;
     this.movie.downvotes = 345;
     this.movie.voteStatus = VoteStatus.None;
+
+    this.showDetails = false;
   }
 
   @HostBinding('class') get class() {
     return this.classes;
+  }
+
+  toggleDetails() {
+    this.showDetails = !this.showDetails;
   }
 }
