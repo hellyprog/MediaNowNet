@@ -24,5 +24,7 @@
         <div>Description: {{movie.description}}</div>
       </div>
     </div>
+    <button (click)="toggleComments()" class="expander">{{(showComments) ? 'Hide' : 'Show'}} comments <i class="fa {{(showComments) ? 'fa-chevron-up' : 'fa-chevron-down'}}"></i></button>
+    <app-comments id={{movie.id}} *ngIf="showComments" class="comments"></app-comments>
   </div>
 </div>

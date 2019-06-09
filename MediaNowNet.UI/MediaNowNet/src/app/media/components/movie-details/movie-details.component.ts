@@ -12,6 +12,7 @@ export class MovieDetailsComponent implements OnInit {
   classes: string = null;
   movie: Movie = null;
   showDetails: boolean;
+  showComments: boolean;
 
   constructor(private route: ActivatedRoute) {
     this.classes = 'movie-details-component';
@@ -39,5 +40,9 @@ export class MovieDetailsComponent implements OnInit {
 
   toggleDetails() {
     this.showDetails = !this.showDetails;
+  }
+
+  toggleComments() {
+    this.showComments = !this.showComments;
   }
 }

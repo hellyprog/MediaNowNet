@@ -1,0 +1,10 @@
+<div class="comments-container">
+  <div *ngFor="let comment of comments" class="comments-block">
+    <div class="author">{{comment.author}}</div>
+    <div class="date">said on {{comment.displayDate}}</div>
+    <div class="text">{{comment.text}}</div>
+  </div>
+  <div class="new-comment">
+    <textarea></textarea>
+  </div>
+</div>
