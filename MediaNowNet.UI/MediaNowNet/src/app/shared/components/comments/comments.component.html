@@ -5,6 +5,7 @@
     <div class="text">{{comment.text}}</div>
   </div>
   <div class="new-comment">
-    <textarea></textarea>
+    <textarea [(ngModel)]="newComment"></textarea>
+    <button class="submit-comment-button" (click)="addComment()">Submit</button>
   </div>
 </div>

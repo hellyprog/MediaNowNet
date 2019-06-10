@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { Comment } from '../../models/Comment';
 import * as moment from 'moment';
+import { NotificationService } from 'src/app/core';
 
 @Component({
   selector: 'app-comments',
@@ -10,8 +11,9 @@ import * as moment from 'moment';
 export class CommentsComponent implements OnInit {
   @Input() id: number;
   comments: Comment[];
+  newComment: string;
 
-  constructor() { }
+  constructor(private notificationService: NotificationService) { }
 
   ngOnInit() {
     const { id } = this;
@@ -29,5 +31,21 @@ export class CommentsComponent implements OnInit {
     comment.text = 'Awesome movie';
 
     return [comment, comment];
+  }
+
+  addComment() {
+    if (!this.newComment || this.newComment.length === 0) {
+      this.notificationService.showError('Comment cannot be empty');
+      return;
+    }
+
+    const comment = new Comment();
+    comment.author = 'Me';
+    comment.date = moment().toDate();
+    comment.displayDate = moment(comment.date).format('MMMM Do YYYY, h:mm:ss a');
+    comment.text = this.newComment;
+
+    this.comments.push(comment);
+    this.newComment = '';
   }
 }

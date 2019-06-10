@@ -3,10 +3,12 @@ import { ImageSlideshowComponent } from './components/image-slideshow/image-slid
 import { CommonModule } from '@angular/common';
 import { RatingComponent } from './components/rating/rating.component';
 import { CommentsComponent } from './components/comments/comments.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   imports: [
-    CommonModule
+    CommonModule,
+    FormsModule
   ],
   exports: [
     CommentsComponent,
