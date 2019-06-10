@@ -7,6 +7,9 @@ import { SharedModule } from './shared';
 import { CoreModule } from './core';
 import { HttpModule } from '@angular/http';
 import { CommonModule } from '@angular/common';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
+import { ToastrModule } from 'ngx-toastr';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { CommonModule } from '@angular/common';
     CoreModule,
     CommonModule,
     HttpModule,
-    SharedModule
+    SharedModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -56,6 +56,8 @@
       @include empty-button;
       background-color: $light-background;
       color: $dark-font;
+      padding: 5px 0;
+      text-align: right;
       width: 100%;
     }
 
@@ -87,6 +89,10 @@
           height: auto;
         }
       }
+    }
+
+    .comments {
+      width: 100%;
     }
   }
 }

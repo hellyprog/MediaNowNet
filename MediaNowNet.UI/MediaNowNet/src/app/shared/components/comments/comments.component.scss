@@ -1,0 +1,46 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/mixins';
+
+.comments-container {
+  width: 100%;
+
+  .comments-block {
+    border-left: 4px solid $dark-background;
+    display: flex;
+    flex-direction: column;
+    font-size: 0.7em;
+    margin: 10px 0;
+    width: 100%;
+
+    .author {
+      font-weight: bold;
+    }
+
+    .author,
+    .date,
+    .text {
+      padding: 0 10px;
+    }
+  }
+
+  .new-comment {
+    display: flex;
+    flex-direction: column;
+    padding: 10px 20px;
+
+    textarea {
+      height: 100px;
+      resize: none;
+      width: 100%;
+    }
+
+    .submit-comment-button {
+      @include standart-button;
+      align-self: flex-end;
+      background-color: $dark-background;
+      color: $light-font;
+      margin-top: 10px;
+      width: fit-content;
+    }
+  }
+}
