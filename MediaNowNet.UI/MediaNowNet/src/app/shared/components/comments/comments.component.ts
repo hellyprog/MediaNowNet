@@ -35,7 +35,7 @@ export class CommentsComponent implements OnInit {
 
   addComment() {
     if (!this.newComment || this.newComment.length === 0) {
-      this.notificationService.showError('Comment cannot be empty');
+      this.notificationService.showWarning('Comment cannot be empty');
       return;
     }
 
