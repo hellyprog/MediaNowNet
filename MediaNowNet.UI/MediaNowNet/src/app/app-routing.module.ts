@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 import { NotFoundComponent } from './core';
+import { AboutComponent } from './core/components/about/about.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,9 @@ const routes: Routes = [
   }, {
     path: 'watch',
     loadChildren: './media/media.module#MediaModule'
+  }, {
+    path: 'about',
+    component: AboutComponent
   }, {
     path: '**',
     component: NotFoundComponent

@@ -4,6 +4,7 @@ import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { UserService } from './services';
 import { HttpClientModule } from '@angular/common/http';
+import { AboutComponent } from './components/about/about.component';
 
 @NgModule({
   imports: [
@@ -14,12 +15,14 @@ import { HttpClientModule } from '@angular/common/http';
   exports: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent
   ],
   declarations: [
     HeaderComponent,
     FooterComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    AboutComponent
   ],
   providers: [/*UserService*/],
 })
