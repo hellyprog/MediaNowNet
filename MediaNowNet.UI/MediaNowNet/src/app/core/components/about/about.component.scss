@@ -1,0 +1,16 @@
+@import '../../../shared/styles/colors';
+@import '../../../shared/styles/placeholders';
+@import '../../../shared/styles/mixins';
+
+:host(.about-component) {
+  @extend %route-component;
+}
+
+.about-container {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  text-transform: uppercase;
+  width: 100%;
+}
