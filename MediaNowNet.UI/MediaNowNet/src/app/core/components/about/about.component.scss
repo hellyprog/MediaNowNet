@@ -7,10 +7,78 @@
 }
 
 .about-container {
-  align-items: center;
   display: flex;
-  flex-direction: column;
   height: 100%;
   text-transform: uppercase;
   width: 100%;
+
+  .text-blocks {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 50%;
+
+    .block {
+      padding: 20px;
+
+      .title {
+        font-size: 1.3em;
+        font-weight: bold;
+      }
+    }
+  }
+
+  .contact-us-container {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    padding: 20px 15px;
+    width: 70%;
+
+    .form-title {
+      font-size: 1.4em;
+      font-weight: bold;
+    }
+
+    .contact-us-form {
+      display: flex;
+      flex-direction: column;
+      width: 50%;
+
+      label {
+        margin-top: 15px;
+      }
+
+      input {
+        font-size: 1em;
+        margin-top: 5px;
+
+        &[type="submit"] {
+          @include standart-button;
+          background-color: $dark-background;
+          color: $light-font;
+          margin-top: 15px;
+        }
+      }
+
+      textarea {
+        font-size: 1em;
+        resize: none;
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 640px) {
+  .about-container {
+    flex-direction: column;
+
+    .text-blocks {
+      width: 100%;
+    }
+
+    .contact-us-container {
+      width: 100%;
+    }
+  }
 }
